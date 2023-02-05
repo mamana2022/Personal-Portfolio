@@ -8,12 +8,16 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - href: about.qmd
+        text: About
+      - href: Visualisation.qmd
+        text: Visualisation
 
 format:
   html:
-    theme: flatly
+    theme: sandstone
     css: styles.css
+    highlight-style: espresso
     toc: true
 
 editor: visual

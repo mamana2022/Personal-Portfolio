@@ -1,6 +1,12 @@
 ---
 title: "About"
+
 about: jolla
+image: oicyouthday.jpg
+html:
+  theme: quartz
+  website:
+  twitter-card: true
 ---
 
 About this site

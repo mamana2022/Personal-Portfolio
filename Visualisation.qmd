@@ -1,0 +1,44 @@
+---
+title: "Visualisation"
+
+about: jolla
+image: Shalan.jpg
+html:
+  theme: lux
+  website:
+  twitter-card: true
+  
+editor: visual
+---
+
+```{r, echo=FALSE, message=FALSE,warning=FALSE}
+library(tidyverse)
+library(scales)
+tuition_cost <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-03-10/tuition_cost.csv')
+tuition_income <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-03-10/tuition_income.csv') 
+salary_potential <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-03-10/salary_potential.csv')
+historical_tuition <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-03-10/historical_tuition.csv')
+diversity_school <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-03-10/diversity_school.csv')
+
+```
+
+Data Exploration
+
+```{r,echo=FALSE, message=FALSE, warning=FALSE}
+diversity_school %>%
+  mutate(pct_enrollment = enrollment / total_enrollment) %>%
+  ggplot(aes(pct_enrollment)) +
+  geom_histogram(color="darkblue", fill="lightblue") +
+  facet_wrap(~ category, scales = "free_x") +
+  scale_x_log10(labels = percent_format())
+```
+
+```{r,echo=FALSE, message=FALSE, warning=FALSE}
+tuition_cost %>%
+  mutate(state_code = fct_reorder(state_code, room_and_board, median, na.rm = TRUE)) %>%
+  ggplot(aes(state_code, room_and_board)) +
+  geom_jitter() +
+  coord_flip()
+```
+
+Credit to Alex Cookson

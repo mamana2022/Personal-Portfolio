@@ -4,7 +4,7 @@ title: "Personal Portfolio"
 about: jolla
 image: Shalan.jpg
 html:
-  theme: minty
+  theme: lumen
   website:
   twitter-card: true
 ---
