@@ -4,7 +4,7 @@
     "href": "Visualisation.html",
     "title": "Visualisation",
     "section": "",
-    "text": "Data Exploration\n\n\n\n\n\n\n\n\n\n\nCredit to Alex Cookson"
+    "text": "Data Exploration\n\n\n\n\n\n\n\n\n\n\nThis is visualization of the students of the University of Phoenix-Arizona. This data tries to demonstrate the percentage of races in the University of Phoenix-Arizona.\nCredit to Alex Cookson\n\nggplot(tuition_cost, aes(state)) + geom_bar(fill=\"pink\", color=\"black\",binwidth =1)  \n\n\n\n\nThis bar chart shows a display of tuition cost in several states.\n\nggplot(tuition_cost, aes(type)) + geom_bar(fill=\"pink\", color=\"blue\",binwidth =20)  \n\n\n\n\nThis bar chart shows a display of number various types of instituitions ; Private, for profit and Public"
   },
   {
     "objectID": "index.html",
