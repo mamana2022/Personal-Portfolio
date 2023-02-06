@@ -24,6 +24,26 @@ diversity_school <- readr::read_csv('https://raw.githubusercontent.com/rfordatas
 
 Data Exploration
 
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+tuition_cost
+
+
+```
+
+Here is visual table of the tuition cost data set. Here there is a list of colleges and their corresponding states in the US
+
+```{r}
+
+```
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+diversity_school
+
+```
+
+```{}
+```
+
 ```{r,echo=FALSE, message=FALSE, warning=FALSE}
 diversity_school %>%
   mutate(pct_enrollment = enrollment / total_enrollment) %>%
@@ -41,7 +61,6 @@ tuition_cost %>%
   coord_flip()
 ```
 
-
 This is visualization of the students of the University of Phoenix-Arizona. This data tries to demonstrate the percentage of races in the University of Phoenix-Arizona.
 
 Credit to Alex Cookson
@@ -50,11 +69,16 @@ Credit to Alex Cookson
 ggplot(tuition_cost, aes(state)) + geom_bar(fill="pink", color="black",binwidth =1)  
 
 ```
+
 This bar chart shows a display of tuition cost in several states.
+
 ```{r, message=FALSE, warning=FALSE}
 ggplot(tuition_cost, aes(type)) + geom_bar(fill="pink", color="blue",binwidth =20)  
 
 ```
 
-This bar chart shows a display of number various types of instituitions ; Private, for profit and Public 
+This bar chart shows a display of number various types of instituitions ; Private, for profit and Public
 
+```{r  message=FALSE, warning=FALSE}
+
+```
