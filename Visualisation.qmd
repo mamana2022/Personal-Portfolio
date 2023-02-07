@@ -24,17 +24,7 @@ diversity_school <- readr::read_csv('https://raw.githubusercontent.com/rfordatas
 
 Data Exploration
 
-```{r,echo=FALSE, message=FALSE, warning=FALSE}
-install.packages("gtExtras")
-library(gt)
-```
 
-```{r,echo=FALSE, message=FALSE, warning=FALSE}
-tuition_cost %>%gt()
- 
-```
-
-This representation is made up of three data sets. Firstly a data set which represents the tuition cost of several colleges in several states in the USA, the degree length if its 2 or 4 years, state code and the type of instituitions be public, private or Non-Profit.
 
 Estimate of Students in Public Private and Non-Profit Universities
 
@@ -51,11 +41,7 @@ ggplot(tuition_cost, aes(degree_length)) +
 geom_bar(fill = "Pink")
 
 ```
-The table below shows the diverse students of different states.
-```{r,echo=FALSE, message=FALSE, warning=FALSE}
-diversity_school%>%gt()
 
-```
 
 ```{r,echo=FALSE, message=FALSE, warning=FALSE}
  pd <- ggplot(data=diversity_school, aes(state))
@@ -63,22 +49,16 @@ pd  + geom_bar(fill="pink")
 
 ```
 
-This bar chart shows the nymber ofdiverse students in several states.
+This bar chart shows the number of diverse students in several states.
 
 ```{r,echo=FALSE, message=FALSE, warning=FALSE}
 #number of black students in Florida
 library(dplyr)
  filter (diversity_school,  (state == "Florida" & category=="Black"))%>%
  ggplot(aes(state))+ geom_bar()
-
-
 ```
 
 Number of Black Students in FLorida.
-
-```{r}
-
-```
 
 ```{r,echo=FALSE, message=FALSE, warning=FALSE}
 diversity_school %>%
