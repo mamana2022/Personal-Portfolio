@@ -179,31 +179,57 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <p>Data Exploration</p>
 <div class="cell">
-<div class="cell-output-display">
-<p><img src="Visualisation_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2,973 × 10
+   name      state state…¹ type  degre…² room_…³ in_st…⁴ in_st…⁵ out_o…⁶ out_o…⁷
+   &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt; &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
+ 1 Aaniiih … Mont… MT      Publ… 2 Year       NA    2380    2380    2380    2380
+ 2 Abilene … Texas TX      Priv… 4 Year    10350   34850   45200   34850   45200
+ 3 Abraham … Geor… GA      Publ… 2 Year     8474    4128   12602   12550   21024
+ 4 Academy … Minn… MN      For … 2 Year       NA   17661   17661   17661   17661
+ 5 Academy … Cali… CA      For … 4 Year    16648   27810   44458   27810   44458
+ 6 Adams St… Colo… CO      Publ… 4 Year     8782    9440   18222   20456   29238
+ 7 Adelphi … New … NY      Priv… 4 Year    16030   38660   54690   38660   54690
+ 8 Adironda… New … NY      Publ… 2 Year    11660    5375   17035    9935   21595
+ 9 Adrian C… Mich… MI      Priv… 4 Year    11318   37087   48405   37087   48405
+10 Advanced… Virg… VA      For … 2 Year       NA   13680   13680   13680   13680
+# … with 2,963 more rows, and abbreviated variable names ¹​state_code,
+#   ²​degree_length, ³​room_and_board, ⁴​in_state_tuition, ⁵​in_state_total,
+#   ⁶​out_of_state_tuition, ⁷​out_of_state_total</code></pre>
 </div>
 </div>
+<p>Here is visual table of the tuition cost data set. Here there is a list of colleges and their corresponding states in the US</p>
+<pre><code></code></pre>
+<pre><code></code></pre>
+<pre><code></code></pre>
 <div class="cell">
 <div class="cell-output-display">
 <p><img src="Visualisation_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<p>This is visualization of the students of the University of Phoenix-Arizona. This data tries to demonstrate the percentage of races in the University of Phoenix-Arizona.</p>
-<p>Credit to Alex Cookson</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(tuition_cost, <span class="fu">aes</span>(state)) <span class="sc">+</span> <span class="fu">geom_bar</span>(<span class="at">fill=</span><span class="st">"pink"</span>, <span class="at">color=</span><span class="st">"black"</span>,<span class="at">binwidth =</span><span class="dv">1</span>)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="Visualisation_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<p>This bar chart shows a display of tuition cost in several states.</p>
+<p>This is visualization of the students of the University of Phoenix-Arizona. This data tries to demonstrate the percentage of races in the University of Phoenix-Arizona.</p>
+<p>Credit to Alex Cookson</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(tuition_cost, <span class="fu">aes</span>(type)) <span class="sc">+</span> <span class="fu">geom_bar</span>(<span class="at">fill=</span><span class="st">"pink"</span>, <span class="at">color=</span><span class="st">"blue"</span>,<span class="at">binwidth =</span><span class="dv">20</span>)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(tuition_cost, <span class="fu">aes</span>(state)) <span class="sc">+</span> <span class="fu">geom_bar</span>(<span class="at">fill=</span><span class="st">"pink"</span>, <span class="at">color=</span><span class="st">"black"</span>,<span class="at">binwidth =</span><span class="dv">1</span>)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="Visualisation_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
+<p>This bar chart shows a display of tuition cost in several states.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(tuition_cost, <span class="fu">aes</span>(type)) <span class="sc">+</span> <span class="fu">geom_bar</span>(<span class="at">fill=</span><span class="st">"pink"</span>, <span class="at">color=</span><span class="st">"blue"</span>,<span class="at">binwidth =</span><span class="dv">20</span>)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Visualisation_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
 <p>This bar chart shows a display of number various types of instituitions ; Private, for profit and Public</p>
+<div class="cell">
+</div>
 
 
 </main>  
